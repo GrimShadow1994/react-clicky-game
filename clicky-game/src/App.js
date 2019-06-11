@@ -1,18 +1,13 @@
 import React, { Component } from "react";
 import "./App.css";
-//  my compoenent
-// import NavBar from "./components/Navbar";
-// import Banner from "./components/Banner";
+
 import IconCard from "./components/IconCard";
 import Icons from "./icons.json";
 import Title from "./components/Title/index";
 import Wrapper from "./components/Wrapper/index"
-//
 import "./components/IconCard.css";
-//
-// import "tachyons";
-// import "hover";
-// import "animate";
+import Navbar from "./components/Navbar/navbar";
+
 
 
 const shuffleArray = (array) => {
@@ -115,8 +110,8 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        
-        <Title topScore={this.state.topScore} currentScore={this.state.currentScore} status={this.state.result}/>
+        <Navbar topScore={this.state.topScore} currentScore={this.state.currentScore} status={this.state.result}/>
+        <Title />
         <div className="mainStyle">
           <Wrapper>
         {this.state.Icons.map(icon => (
